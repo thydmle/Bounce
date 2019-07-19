@@ -29,8 +29,8 @@ import sys
 
 # -------------------------------------------------------
 # GLOBAL VARIABLES
-xxx = np.linspace(2, 20, num=18)
-yyy = np.ones(18, np.int)
+xxx = np.linspace(2, 20, num=19)
+yyy = np.ones(19, np.int)
 
 ser = serial.Serial()
 ychan = 0
@@ -98,7 +98,7 @@ class MainWindow(wx.Frame):
         self.axis = self.figure.add_subplot(1,1,1)
         self.figure.subplots_adjust(left=0.1, right=0.975, top=0.98, bottom=0.075)
 
-        self.axis.set_yscale('linear')
+        self.axis.set_yscale('log')
         self.figurepanel = FigureCanvas(self.panel, -1, self.figure)
         self.draw()
         self.graph_box = wx.BoxSizer(wx.HORIZONTAL)
@@ -214,13 +214,9 @@ class MainWindow(wx.Frame):
                 self.remains = ""
 
             for d in data:
-                if ychan == 0:
-                    temp[ychan] = int(d)
-                    ychan += 1
-                else:
-                    temp[ychan] = int(d)
-                    yyy[ychan - 1] = np.log(temp[ychan] - temp[ychan-1])
-                    ychan += 1
+                yyy[ychan] = int(d)
+                print yyy[ychan]
+                ychan += 1
 
             self.draw()
         event.RequestMore(True)
@@ -236,7 +232,7 @@ class MainWindow(wx.Frame):
         self.axis.set_xticks(xxx)
         self.axis.grid(color='lightgrey')
 
-        self.axis.set_yticks(np.logspace(-1, 1, 18))
+        self.axis.set_yticks(np.logspace(-1, 1, 19))
         self.axis.set_ylim(bottom=0.1, top=10)
 
         self.theline = self.axis.semilogy(xxx, yyy, color='blue', drawstyle='steps-mid')

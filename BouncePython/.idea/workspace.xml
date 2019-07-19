@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c7b5d4e-89f7-4900-89d2-b28c26491ed0" name="Default Changelist" comment="" />
+    <list default="true" id="8c7b5d4e-89f7-4900-89d2-b28c26491ed0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bounce.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Bounce.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,12 +13,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Bounce.py">
+        <entry file="file://$PROJECT_DIR$/venv/Bounce.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="221" column="72" selection-start-line="221" selection-start-column="72" selection-end-line="221" selection-end-column="72" />
+            <state relative-caret-position="169">
+              <caret line="217" column="31" selection-start-line="217" selection-start-column="31" selection-end-line="217" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -28,26 +32,29 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/venv/Bounce.py" />
         <option value="$PROJECT_DIR$/Bounce.py" />
+        <option value="$PROJECT_DIR$/venv/Bounce.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="420" />
+    <option name="x" value="515" />
     <option name="y" value="23" />
     <option name="width" value="860" />
     <option name="height" value="726" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -55,10 +62,16 @@
               <item name="BouncePython" type="b2602c69:ProjectViewProjectNode" />
               <item name="BouncePython" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="BouncePython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BouncePython" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -67,6 +80,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/venv" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -82,7 +96,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Bounce (1)">
+    <configuration name="Bounce (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Bounce" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Bounce.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Bounce" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Bounce" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -106,6 +141,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Bounce (1)" />
         <item itemvalue="Python.Bounce" />
       </list>
     </recent_temporary>
@@ -124,8 +160,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="420" y="23" width="860" height="726" extended-state="0" />
-    <editor active="true" />
+    <frame x="515" y="23" width="860" height="726" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28128725" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -147,20 +182,11 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Bounce.py">
+    <entry file="file://$PROJECT_DIR$/../BounceCount.py" />
+    <entry file="file://$PROJECT_DIR$/venv/Bounce.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BounceCount.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bounce.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="221" column="72" selection-start-line="221" selection-start-column="72" selection-end-line="221" selection-end-column="72" />
+        <state relative-caret-position="169">
+          <caret line="217" column="31" selection-start-line="217" selection-start-column="31" selection-end-line="217" selection-end-column="31" />
         </state>
       </provider>
     </entry>
