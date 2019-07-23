@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c7b5d4e-89f7-4900-89d2-b28c26491ed0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bounce.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Bounce.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BounceArduino/BounceArduino.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../BounceArduino/BounceArduino.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Bounce.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Bounce.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/venv/Bounce.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="217" column="31" selection-start-line="217" selection-start-column="31" selection-end-line="217" selection-end-column="31" />
+            <state relative-caret-position="281">
+              <caret line="226" column="66" lean-forward="true" selection-start-line="226" selection-start-column="66" selection-end-line="226" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -44,9 +44,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="515" />
     <option name="y" value="23" />
-    <option name="width" value="860" />
+    <option name="width" value="1280" />
     <option name="height" value="726" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -160,14 +159,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="515" y="23" width="860" height="726" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="726" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28128725" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18745036" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329653" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329653" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -185,8 +184,8 @@
     <entry file="file://$PROJECT_DIR$/../BounceCount.py" />
     <entry file="file://$PROJECT_DIR$/venv/Bounce.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="217" column="31" selection-start-line="217" selection-start-column="31" selection-end-line="217" selection-end-column="31" />
+        <state relative-caret-position="281">
+          <caret line="226" column="66" lean-forward="true" selection-start-line="226" selection-start-column="66" selection-end-line="226" selection-end-column="66" />
         </state>
       </provider>
     </entry>

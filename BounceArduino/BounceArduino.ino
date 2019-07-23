@@ -20,10 +20,10 @@ int val = 0;
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(250000);
-  pinMode(inputPin, INPUT);
+  pinMode(inputPin, INPUT_PULLUP);
   
-  analogReference(DEFAULT);
-//  attachInterrupt(digitalPinToInterrupt(2), bounce, RISING);
+  attachInterrupt(digitalPinToInterrupt(2), bounce, RISING);
+  
 //  noInterrupts();
 //  TCCR1A = 0;
 //  TCCR1B = 0;
@@ -49,26 +49,15 @@ void setup() {
 }
 void bounce(){
   if(start){
-    Serial.println("Interrupt");
-//
-//    if(first == true){
-//      currentTime = millis();
-//      first = false;
-//    }
-//    else{
-//      secondsPassed = millis() - currentTime;
-//      secondsPassed = secondsPassed/1000;
-//      Serial.println(secondsPassed);
-//      currentTime = millis();
-//      secondsPassed = 0;
-//    }
-
+//    Serial.println("Interrupt");
+   
+    Serial.println(millis());
   }
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  val = analogRead(A0);
+ // val = analogRead(A0);
   
   if(Serial.available()){
     usrInput = Serial.read();
@@ -82,7 +71,7 @@ void loop() {
       usrInput = "";
     }
   }
-  if(val >= 1000){
-    Serial.println(val);
-  }
+//  if(val >= 1000){
+//    Serial.println(val);
+ // }
 }

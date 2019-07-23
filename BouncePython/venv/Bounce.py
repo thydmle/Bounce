@@ -26,15 +26,19 @@ import numpy as np
 import serial
 import serial.tools.list_ports
 import sys
+import numpy as np
 
 # -------------------------------------------------------
 # GLOBAL VARIABLES
-xxx = np.linspace(2, 20, num=19)
-yyy = np.ones(19, np.int)
+xxx = np.linspace(2, 30, num=29)
+yyy = np.zeros(29, np.int)
 
 ser = serial.Serial()
 ychan = 0
-tempchan = 1
+tempchan = 0
+first = True
+count = 0
+temp = np.zeros(len(yyy))
 
 # -------------------------------------------------------
 # MAIN WINDOW
@@ -98,7 +102,7 @@ class MainWindow(wx.Frame):
         self.axis = self.figure.add_subplot(1,1,1)
         self.figure.subplots_adjust(left=0.1, right=0.975, top=0.98, bottom=0.075)
 
-        self.axis.set_yscale('log')
+        self.axis.set_yscale('linear')
         self.figurepanel = FigureCanvas(self.panel, -1, self.figure)
         self.draw()
         self.graph_box = wx.BoxSizer(wx.HORIZONTAL)
@@ -201,9 +205,8 @@ class MainWindow(wx.Frame):
     # -------------------------------------------------------------
 
     def OnIdle(self, event):
-        global xxx, yyy, ychan, tempchan
-        # first = True
-        temp = np.zeros(len(yyy), np.int)
+        global xxx, yyy, ychan, tempchan, first, count, temp
+
         if self.ser.inWaiting() > 0:
             ins = self.ser.read(self.ser.inWaiting())
             data = (self.remains + ins).split()
@@ -212,12 +215,23 @@ class MainWindow(wx.Frame):
                 self.remains = data.pop()
             else:
                 self.remains = ""
-
+# problematic
             for d in data:
-                yyy[ychan] = int(d)
-                print yyy[ychan]
-                ychan += 1
 
+                if first:
+                    temp[tempchan] = int(d)
+                    first = False
+                    tempchan += 1
+                else:
+                    temp[tempchan] = int(d)
+                    yyy[ychan] = temp[tempchan] - temp[tempchan-1]
+                    print str(temp[tempchan]) + " - " + str(temp[tempchan-1]) + " = " + str(yyy[ychan])
+                    ychan += 1
+                    tempchan += 1
+
+
+
+# problematic
             self.draw()
         event.RequestMore(True)
 
@@ -228,14 +242,14 @@ class MainWindow(wx.Frame):
         self.axis.clear()
         self.axis.set_xlabel('Bounce Number')
         self.axis.set_ylabel('Delta time (s)')
-        self.axis.set_xlim(2, 20)
+        self.axis.set_xlim(2, 30)
         self.axis.set_xticks(xxx)
         self.axis.grid(color='lightgrey')
 
-        self.axis.set_yticks(np.logspace(-1, 1, 19))
-        self.axis.set_ylim(bottom=0.1, top=10)
+        self.axis.set_yticks(np.linspace(0, 1000, 29))
+        self.axis.set_ylim(bottom=0, top=1000)
 
-        self.theline = self.axis.semilogy(xxx, yyy, color='blue', drawstyle='steps-mid')
+        self.theline = self.axis.plot(xxx, yyy,'bo', color='blue')
         self.figurepanel.draw()
     # ------------------------------------------------------------
 
