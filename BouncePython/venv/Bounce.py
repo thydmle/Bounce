@@ -10,8 +10,17 @@
 # Author: Thy Doan Mai Le
 # Originally created: 7/18/2019
 # Last Update : 7/18/2019
+#               7/23/2019
 
 # -----------------------------------------------------
+
+# IMPORTANT NOTE: Program will only return the difference between bounce times
+#                 The student will be required to take the logarithmic of these
+#                   time differences in order to extract the coefficient of restitution
+
+# Thy - 07/23/2019
+
+# ------------------------------------------------------
 
 
 import wx
@@ -215,7 +224,6 @@ class MainWindow(wx.Frame):
                 self.remains = data.pop()
             else:
                 self.remains = ""
-# problematic
             for d in data:
 
                 if first:
@@ -229,9 +237,6 @@ class MainWindow(wx.Frame):
                     ychan += 1
                     tempchan += 1
 
-
-
-# problematic
             self.draw()
         event.RequestMore(True)
 
