@@ -40,7 +40,7 @@ import numpy as np
 # -------------------------------------------------------
 # GLOBAL VARIABLES
 xxx = np.linspace(2, 30, num=29)
-yyy = np.zeros(29, np.int)
+yyy = np.zeros(29, np.float)
 
 ser = serial.Serial()
 ychan = 0
@@ -232,8 +232,8 @@ class MainWindow(wx.Frame):
                     tempchan += 1
                 else:
                     temp[tempchan] = int(d)
-                    yyy[ychan] = temp[tempchan] - temp[tempchan-1]
-                    print str(temp[tempchan]) + " - " + str(temp[tempchan-1]) + " = " + str(yyy[ychan])
+                    yyy[ychan] = np.log10(temp[tempchan] - temp[tempchan-1])
+                    print "log (" + str(temp[tempchan]) + " - " + str(temp[tempchan-1]) + ") = " + str(yyy[ychan])
                     ychan += 1
                     tempchan += 1
 
@@ -254,7 +254,7 @@ class MainWindow(wx.Frame):
         self.axis.set_yticks(np.linspace(0, 1000, 29))
         self.axis.set_ylim(bottom=0, top=1000)
 
-        self.theline = self.axis.plot(xxx, yyy,'bo', color='blue')
+        self.theline = self.axis.semilogy(xxx, yyy,'bo', color='blue')
         self.figurepanel.draw()
     # ------------------------------------------------------------
 
